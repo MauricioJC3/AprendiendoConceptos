@@ -1,0 +1,38 @@
+# Docker Volumes
+docker/volumes/
+*.volume/
+*.data/
+
+# Environment Files
+.env
+*.env
+!.env.example
+
+# Composer
+vendor/
+composer.lock
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-lock.yaml
+
+# Laravel
+storage/*.key
+*.log
+.phpunit.result.cache
+
+# Development
+.DS_Store
+.idea/
+.vscode/
+
+# Build Artifacts
+build/
+dist/
+
+# Security
+*.pem
+*.key
+*.crt
