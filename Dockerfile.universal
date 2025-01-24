@@ -1,0 +1,24 @@
+FROM php:8.2-apache
+
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    libpng-dev \
+    libonig-dev \
+    libxml2-dev \
+    zip \
+    unzip \
+    npm \
+    nodejs
+
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN npm install -g pnpm
+
+RUN a2enmod rewrite
+
+WORKDIR /var/www/html
+
+COPY apache-universal.conf /etc/apache2/sites-available/000-default.conf
+
+CMD ["apache2-foreground"]
