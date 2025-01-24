@@ -53,7 +53,7 @@ AprendiendoConceptos/
 
 ## Servicios
 - PHP: localhost
-- MySQL: localhost:3306
+- MySQL: localhost:3308
 - PostgreSQL: localhost:5432
 
 ## Credenciales

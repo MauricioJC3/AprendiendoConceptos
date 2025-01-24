@@ -1,5 +1,6 @@
-FROM php:8.2-fpm
+ARG PHP_VERSION
 
+FROM php:${PHP_VERSION}-fpm
 # Instalar dependencias
 RUN apt-get update && apt-get install -y \
     git \
